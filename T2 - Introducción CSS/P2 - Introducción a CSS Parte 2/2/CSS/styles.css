@@ -1,0 +1,15 @@
+body {
+    background-color: #d5ced8;
+}
+p{
+    color: beige;
+}
+.segundo {
+    color: #f00000;
+}
+.tercero{
+    background: hsla(229, 100%, 50%, 0.3);
+}
+a{
+    background-color: rgba(106, 90, 205, 0.5);
+}

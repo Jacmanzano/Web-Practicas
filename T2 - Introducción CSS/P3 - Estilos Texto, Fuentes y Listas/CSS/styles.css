@@ -1,0 +1,66 @@
+body {
+    font-family: 'Lato', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 350;
+}
+
+<!-- TITULOS>
+
+h1, h2{
+    color: blue;
+    letter-spacing: 0.2px;
+    line-height: 1.5cm;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+h2{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+<!-- PARRAFOS>
+
+p {
+    color:gray
+}
+
+.p1 {
+    text-align: left;
+    font-style: italic;
+}
+
+.p2 {
+    text-align: right;
+    text-transform: lowercase;
+}
+
+.p3 {
+    text-align: center;
+}
+
+.p4 {
+    text-align: justify;
+    line-height: 25px;
+    font-style:oblique;
+}
+
+<!-- LISTAS>
+
+ul{
+   list-style-type: circle;
+   list-style-image: url('../Imagenes/pollo.jpg');
+}
+
+ol{
+    list-style-position: inside;
+    list-style-image: url('../Imagenes/pollo.jpg');
+    color: black;
+}

@@ -1,0 +1,21 @@
+.background-color {
+    background-color: blue
+}
+.background-gradient{
+    background: hsla(30, 90%, 70%, 1) 100%
+}
+.background-img-cover {
+    background-image: url('https://previews.123rf.com/images/abluecup/abluecup1309/abluecup130900036/22175824-a-3d-little-human-character-test-tube-red-reagent.jpg');
+    background-size: cover;
+}
+.background.img-contain {
+    background-image: url('https://previews.123rf.com/images/abluecup/abluecup1309/abluecup130900036/22175824-a-3d-little-human-character-test-tube-red-reagent.jpg');
+    background-size: contain;
+}
+.background-img-repeat {
+    background-image: url('https://previews.123rf.com/images/abluecup/abluecup1309/abluecup130900036/22175824-a-3d-little-human-character-test-tube-red-reagent.jpg');
+    background-size: repeat;
+}
+.opacity-test {
+    background-color: rgba(0, 0, 0, 0.2)
+}

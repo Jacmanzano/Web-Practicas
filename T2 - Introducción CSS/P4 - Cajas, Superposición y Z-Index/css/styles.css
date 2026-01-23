@@ -1,0 +1,62 @@
+header {
+    color: blue;
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    background-color: aliceblue;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 10px;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    padding: 20px;
+    border: 2px;
+}
+.overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    border-radius: 15px;
+    box-shadow: 15px;
+}
+.floating {
+    float: right;
+    color: blueviolet;
+    padding: 25px;
+}
+.z-index-demo{
+    position: relative;
+    height: 100px;
+}
+.z-index1, .z-index2, .z-index3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.z-index1 {
+    background-color: red;
+    z-index: 1;
+}
+.z-index2 {
+    background-color: blue;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+.z-index3 {
+    background-color: green;
+    top: 40px;
+    left: 40px;
+    z-index: 3;
+}
+footer {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}

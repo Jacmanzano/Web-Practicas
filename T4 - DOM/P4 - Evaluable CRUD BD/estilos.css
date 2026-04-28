@@ -1,0 +1,284 @@
+/* ==== ESTILOS LOL MANAGER ==== */
+/* Fuentes personalizadas inspiradas en League of Legends */
+@font-face {
+    font-family: 'Beaufort for LOL';
+    src: url('https://fonts.cdnfonts.com/s/72886/BeaufortforLOL-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+:root {
+    /* Paleta de colores Hextech / LOL */
+    --gold-primary: #C89B3C;
+    --gold-light: #F0E6D2;
+    --gold-dark: #785A28;
+    --blue-hextech: #0AC8B9;
+    --blue-hextech-dark: #005A82;
+    --bg-dark: #091428;
+    --bg-panel: #010A13;
+    --border-color: #322814;
+    --text-main: #A09B8C;
+    --red-error: #FF4E50;
+    --green-success: #00FF87;
+    --shadow-gold: 0 0 10px rgba(200, 155, 60, 0.4);
+    --shadow-blue: 0 0 15px rgba(10, 200, 185, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Spiegel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Fondo con efecto de "La Grieta" / Textura sutil */
+.rift-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(10,200,185,0.05) 0%, rgba(1,10,19,0.9) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid var(--gold-dark);
+    background: linear-gradient(to bottom, rgba(1,10,19,0.9), transparent);
+}
+
+h1, h2, h3 {
+    font-family: 'Beaufort for LOL', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    color: var(--gold-primary);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: var(--gold-light);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Paneles */
+.panel {
+    background: rgba(1, 10, 19, 0.85);
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 5px 15px rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.panel::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, var(--gold-dark), transparent, var(--gold-dark)) 1;
+    pointer-events: none;
+}
+
+.panel:hover {
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8), var(--shadow-gold);
+}
+
+.top-panels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--gold-primary);
+    font-weight: bold;
+    font-family: 'Beaufort for LOL', serif;
+    letter-spacing: 1px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--gold-dark);
+    color: var(--gold-light);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: var(--gold-primary);
+    box-shadow: inset 0 0 5px var(--gold-primary);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+/* Botones */
+button {
+    background: linear-gradient(180deg, #1E2328 0%, #0A1428 100%);
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-light);
+    padding: 0.8rem 1.5rem;
+    font-family: 'Beaufort for LOL', serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background: linear-gradient(180deg, var(--gold-dark) 0%, #1E2328 100%);
+    color: #fff;
+    border-color: var(--gold-light);
+    text-shadow: 0 0 5px #fff;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.btn-cancel {
+    background: linear-gradient(180deg, #321010 0%, #1A0505 100%);
+    border-color: var(--red-error);
+    color: #ffcccc;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(180deg, var(--red-error) 0%, #321010 100%);
+    border-color: #fff;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Grid de Campeones */
+.contratos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.campeon-card {
+    background: #010A13;
+    border: 1px solid var(--blue-hextech-dark);
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.campeon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-blue);
+    border-color: var(--blue-hextech);
+}
+
+.campeon-card h3 {
+    color: var(--blue-hextech);
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--blue-hextech-dark);
+    padding-bottom: 0.3rem;
+}
+
+.campeon-card p {
+    margin: 0.4rem 0;
+}
+
+.badge-baja { color: var(--green-success); font-weight: bold; }
+.badge-media { color: #FFD700; font-weight: bold; }
+.badge-alta { color: var(--red-error); font-weight: bold; }
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.btn-edit {
+    background: linear-gradient(180deg, #0A1428 0%, #005A82 100%);
+    border-color: var(--blue-hextech);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-delete {
+    background: linear-gradient(180deg, #321010 0%, #1A0505 100%);
+    border-color: var(--red-error);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Mensajes / Utilidades */
+.error-text {
+    color: var(--red-error);
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.success-text {
+    color: var(--green-success);
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.system-msg {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--gold-light);
+}
+
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: var(--blue-hextech);
+    font-style: italic;
+}
+
+@keyframes blinker {
+    50% { opacity: 0.3; }
+}
+
+@media (min-width: 768px) {
+    .top-panels {
+        grid-template-columns: 1fr;
+    }
+}

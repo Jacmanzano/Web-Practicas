@@ -1,0 +1,15 @@
+#numeros {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#numeros div {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}

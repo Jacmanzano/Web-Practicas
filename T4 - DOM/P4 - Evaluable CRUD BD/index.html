@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚔️ LOL MANAGER - CRUD de Campeones</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Beaufort+for+LOL:wght@400;700&family=Spiegel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="rift-overlay"></div>
+    <header>
+        <h1>⚔️ LOL MANAGER - Base de Datos de Campeones</h1>
+        <p>Sistema de gestión de campeones (PHP + MySQL + API Fetch)</p>
+    </header>
+
+    <main id="dashboard-lol">
+        <div class="top-panels">
+            <!-- Formulario de Creación/Actualización -->
+            <section id="form-section" class="panel form-panel">
+                <h2 id="form-title">➕ Reclutar Nuevo Campeón</h2>
+                <form id="campeon-form">
+                    <!-- Campo oculto para el ID al actualizar -->
+                    <input type="hidden" id="campeon-id">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Campeón:</label>
+                        <input type="text" id="nombre" placeholder="Ej: Jinx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rol">Rol (Clase):</label>
+                        <select id="rol" required>
+                            <option value="">-- Selecciona el Rol --</option>
+                            <option value="Tirador">Tirador</option>
+                            <option value="Mago">Mago</option>
+                            <option value="Luchador">Luchador</option>
+                            <option value="Asesino">Asesino</option>
+                            <option value="Tanque">Tanque</option>
+                            <option value="Apoyo">Apoyo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dificultad">Dificultad:</label>
+                        <select id="dificultad" required>
+                            <option value="Baja">Baja</option>
+                            <option value="Media">Media</option>
+                            <option value="Alta">Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precio">Precio (Esencias Azules):</label>
+                        <input type="number" id="precio" min="450" max="7800" step="50" placeholder="Ej: 4800" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btnGuardar">GUARDAR CAMPEÓN</button>
+                        <button type="button" id="btnCancelar" class="btn-cancel hidden">CANCELAR EDICIÓN</button>
+                    </div>
+                    <p id="form-mensaje" class="system-msg"></p>
+                </form>
+            </section>
+        </div>
+
+        <!-- Lista de Campeones -->
+        <section id="lista-section" class="panel">
+            <h2>🏆 Campeones Reclutados (Base de Datos)</h2>
+            <div class="tablon-controls">
+                <button id="btnRefrescar">Actualizar Lista (GET)</button>
+            </div>
+            <div id="campeones-grid" class="contratos-grid">
+                <p class="blink">Cargando campeones desde la API PHP...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- TODO: AL FINALIZAR LA PRÁCTICA, CAMBIAR app_solucion.js POR app_plantilla.js -->
+    <script src="app_plantilla.js"></script>
+</body>
+
+</html>
